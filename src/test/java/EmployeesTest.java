@@ -1,8 +1,11 @@
 import controller.EmployeeController;
-import dto.response.Employee;
+import dto.response.EmployeeResponse;
+import io.restassured.http.Cookies;
 import org.junit.jupiter.api.Test;
 
 public class EmployeesTest {
+
+  public static Cookies cookies;
 
   @Test
   void getEmployees() {
@@ -25,13 +28,12 @@ public class EmployeesTest {
   @Test
   void deleteEmployee() {
     EmployeeController employeeController = new EmployeeController();
-    employeeController.deleteEmployee(93);
+    employeeController.deleteEmployee(70);
   }
 
   @Test
   void createAndDeleteEmployee() {
     EmployeeController employeeController = new EmployeeController();
-    Employee employee = employeeController.createEmployee("Dadang", 15000, 25);
-    employeeController.deleteEmployee(employee.getData().getId());
+    employeeController.createAndDeleteEmployee("Dadang", 15000, 25);
   }
 }
