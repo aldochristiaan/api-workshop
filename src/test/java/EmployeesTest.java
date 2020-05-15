@@ -1,11 +1,8 @@
 import controller.EmployeeController;
-import dto.response.EmployeeResponse;
-import io.restassured.http.Cookies;
 import org.junit.jupiter.api.Test;
 
 public class EmployeesTest {
 
-  public static Cookies cookies;
 
   @Test
   void getEmployees() {

@@ -12,7 +12,6 @@ import io.restassured.response.Response;
 
 public class EmployeeController {
 
-
   private Cookies generateCookies() {
     return RestAssured
         .given()
